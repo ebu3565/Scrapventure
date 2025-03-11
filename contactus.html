@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylecontact.css">
+    <script src="https://kit.fontawesome.com/7b123cb179.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <section id="header">
+        <a href="#"><img src="img/scrap.png" class="logo" alt=""></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contactus.html">Contact</a></li>
+                <li id="lg-bag"><a href="cart.html"><i class='bx bx-shopping-bag' ></i></a></li>
+                <a href="#" id="close"><i class='bx bx-x'></i></a>
+            </ul>
+        </div>
+
+        <div id="mobile">
+            <a href="cart.html"><i class='bx bx-shopping-bag' ></i></a>
+            <i id="bar" class='bx bx-menu'></i>
+        </div>
+    </section>
+
+      <!------Contact----------->
+      
+      <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact With ScrapVenture</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> scrapventure@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> 01843860597</p>
+                    <div class="social-icon">
+             
+                <div class="contact-right">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+               
+            </div>
+                <a href="payment.html" download class="btn btn2">Payment Method</a>
+            </div>
+                   <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                               <input type="text" name="Name" placeholder="Your Name" required>
+                               <input type="email" name="Email" placeholder="Your Em@il" required>
+                               <input type="text" name="Address" placeholder="Your Address" required>
+                               <textarea name="Massage" rows="6" placeholder="Your Selling Product Details"></textarea>
+                               <button type="submit" class="btn btn2">Submit</button>
+
+                    </form>
+                    <span id="msg">Happy Selling!</span>
+                   </div>
+            </div>
+
+        </div>
+
+        
+
+        <script>
+            var sidemeu =document.getElementById("sidemenu");
+        
+        function openmenu(){
+            sidemeu.style.right="0";
+        
+        }
+        
+        function closemenu(){
+            sidemeu.style.right="-200px";
+            
+        }
+        </script>
+        
+        
+          <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyu2DMgdYaA9W_ujoGqqgGsVaCkW66XGCknGNzA5UiXDZMmjCx9pyLxcKdUHDr_GPYZ/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg=document.getElementById("msg")
+            
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response =>{
+                    msg.innerHTML="Message sent Successfully"
+                    setTimeout(function(){
+                        msg.innerHTML=""
+                    },5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+
+          
+        <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color:  #E3E6F3; /* Black background */
+    color: #000000; /* White text */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .payment-container {
+    max-width: 400px;
+    margin: 50px auto;
+    background:#fff; /* Darker background for the form */
+    padding: 20px;
+    border-radius: 8px;
+    /* box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); */
+  }
+  
+  .logo {
+    text-align: center;
+    color: #ff69b4; /* Pink logo text */
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  h1, label {
+    color: #000000; /* White text */
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    font-weight: bold;
+  }
+  
+  select, input {
+    width: 95%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background:  #E3E6F3; /* Dark background for inputs */
+    color: #060505;
+  }
+  
+  select:focus, input:focus {
+    border-color: #ff69b4; /* Pink border on focus */
+    outline: none;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .btn {
+    flex: 1;
+    padding: 10px;
+    background-color: #088178; 
+    color: #fff; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+   
+  }
+  
+  .btn:hover {
+    background-color: ;/* Darker pink on hover */
+}
+  
+  button:disabled {
+    background-color: #fff2f2; /* Disabled button background */
+    cursor: not-allowed;
+  }
+  

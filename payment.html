@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Gateway - The Vendor</title>
+  <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+  <div class="payment-container">
+    <h1 class="logo"><img src="img/scrap.png"></h1>
+    <form id="payment-form">
+      <!-- User Mobile Banking Number -->
+      <div class="form-group">
+        <label for="user-number">Your Name</label>
+        <input type="text" id="user-number" name="userNumber" placeholder="Enter your name" required>
+      </div>
+
+      <!-- Choose Payment Method -->
+      <div class="form-group">
+        <label for="payment-method">Choose Payment Method</label>
+        <select id="payment-method" name="paymentMethod" required>
+          <option value="" disabled selected>Select a method</option>
+          <option value="bkash">Bkash</option>
+          <option value="nagad">Nagad</option>
+          <option value="paypal">PayPal</option>
+        </select>
+      </div>
+
+      <!-- Dynamic Payment Fields -->
+      <div id="payment-details" class="form-group">
+        <!-- Details will be dynamically inserted here -->
+      </div>
+
+      <!-- Payment Amount -->
+      <div class="form-group">
+        <label for="amount">Amount</label>
+        <input type="number" id="amount" name="amount" placeholder="Enter Amount" required min="1">
+      </div>
+
+      <!-- Buttons -->
+      <div class="button-group">
+        <button type="submit" class="btn btn2">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="payment.js"></script>
+</body>
+</html>
